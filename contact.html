@@ -37,6 +37,26 @@
         }
     </style>
 </head>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    (function(){
+       emailjs.init("public_w_a2VVCu21TQOLEvC");
+    })();
+    </script>
+<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_nwmqn8n", "template_nibj153", this)
+        .then(function() {
+            alert("Thank you for your inquiry. Our team will contact you shortly.");
+            document.getElementById("contact-form").reset();
+        }, function(error) {
+            alert("Failed to send inquiry. Please try again later.");
+            console.error("EmailJS Error:", error);
+        });
+});
+</script>
 
 <body>
 
@@ -95,7 +115,8 @@
                 <!-- Contact Form -->
                 <div style="background: var(--color-light-gray); padding: 30px; border-radius: 8px;">
                     <h3 style="margin-bottom: 20px;">Send Us an Inquiry</h3>
-                    <form action="sendmail.php" method="POST">
+                    <form id="contact-form">
+
 
                         <div class="form-group">
                             <label for="name">Full Name</label>
@@ -171,6 +192,7 @@
 
 
 </html>
+
 
 
 
