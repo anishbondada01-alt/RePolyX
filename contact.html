@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RePolyX</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">RePoly<span>X</span></a>
+            <div class="mobile-toggle">☰</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html#why-us">Why Us</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="section-padding" style="margin-top: 80px; background-color: var(--color-secondary); color: white;">
+        <div class="container text-center">
+            <h1>Get In Touch</h1>
+            <p style="max-width: 600px; margin: 0 auto; opacity: 0.9;">
+                Ready to switch to sustainable polymers? Request a sample or a quote today.
+            </p>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="color: var(--color-primary); margin-bottom: 20px;">Contact Information</h2>
+                    <p style="margin-bottom: 30px;">
+                        Have questions about our grades, pricing, or EPR services? Reach out to us directly.
+                    </p>
+
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 5px;">📍 Head Office</h4>
+                        <p>123 Green Industrial Park,<br>Mumbai, Maharashtra, India - 400001</p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 5px;">📞 Phone</h4>
+                        <p>+91 98765 43210</p>
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 5px;">📧 Email</h4>
+                        <p>sales@repolyx.com<br>info@repolyx.com</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="background: var(--color-light-gray); padding: 30px; border-radius: 8px;">
+                    <h3 style="margin-bottom: 20px;">Send Us an Inquiry</h3>
+                    <form action="#" method="POST"
+                        onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We will contact you shortly.');">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" required placeholder="Your Company Ltd">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 90000 00000">
+                        </div>
+                        <div class="form-group">
+                            <label for="requirement">Requirement</label>
+                            <select id="requirement" name="requirement">
+                                <option value="sample">Request a Sample</option>
+                                <option value="quote">Get a Quote</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="epr">EPR Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">RePoly<span>X</span></div>
+                    <p>Leading the way in sustainable polymer solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-links">
+                        <li>📧 info@repolyx.com</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>📍 Mumbai, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 RePolyX. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
