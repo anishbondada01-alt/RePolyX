@@ -89,3 +89,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// --- GLOBAL FUNCTIONS FOR PRODUCTS PAGE ---
+// Exposed to window so HTML onclick attributes can access them
+
+window.openProductTab = function (evt, tabName) {
+    // Hide all tab contents
+    const tabContents = document.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+    }
+
+    // Remove active class from all buttons
+    const tabLinks = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].classList.remove("active");
+    }
+
+    // Show the specific tab content
+    document.getElementById(tabName).classList.add("active");
+
+    // Add active class to the button that opened the tab
+    evt.currentTarget.classList.add("active");
+};
+
+window.toggleImage = function (id) {
+    const imgContainer = document.getElementById(id);
+    if (imgContainer) {
+        imgContainer.classList.toggle("visible");
+
+        // Optional: Update button text if needed, but current specific request didn't ask for it.
+        // We'll keep it simple as "Know More" -> Shows Image.
+    }
+};
