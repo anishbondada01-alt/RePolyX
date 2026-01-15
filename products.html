@@ -41,63 +41,80 @@
 
     <section class="section-padding">
         <div class="container">
-            <!-- Product 1: PP -->
-            <div class="reveal"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); margin-bottom: var(--spacing-xl); align-items: center;">
-                <div>
-                    <img src="assets/pp-granules.png" alt="PCR Polypropylene Granules"
-                        style="border-radius: 8px; box-shadow: var(--shadow-lg);">
-                </div>
-                <div>
-                    <span class="badge"
-                        style="background: var(--color-secondary); color: white; border: none;">PCR-PP</span>
-                    <h2 style="font-size: 2.2rem; margin-top: 10px;">Recycled Polypropylene (PP)</h2>
-                    <p style="margin-bottom: 20px;">High-grade recycled PP granules derived from post-consumer waste.
-                        Ideal for injection molding and extrusion processes.</p>
+            <!-- Tabs Navigation -->
+            <div class="tab-nav reveal">
+                <button class="tab-btn active" onclick="openProductTab(event, 'pp-tab')">Recycled PP</button>
+                <button class="tab-btn" onclick="openProductTab(event, 'pe-tab')">Recycled PE</button>
+            </div>
 
-                    <h4 style="color: var(--color-primary);">Technical Specifications</h4>
-                    <ul style="margin-bottom: 20px; list-style-type: none;">
-                        <li>• <strong>Melt Flow Index (MFI):</strong> 5 - 20 g/10min (Customizable)</li>
-                        <li>• <strong>Density:</strong> 0.90 - 0.92 g/cm³</li>
-                        <li>• <strong>Color:</strong> Natural, White, Black, Custom</li>
-                        <li>• <strong>Filtration:</strong> 100 - 150 mesh</li>
-                    </ul>
+            <!-- PP Tab Content -->
+            <div id="pp-tab" class="tab-content active reveal">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <span class="badge"
+                        style="background: var(--color-secondary); color: white; border: none; margin-bottom: 10px; display: inline-block;">PCR-PP</span>
+                    <h2 style="font-size: 2.2rem;">Recycled Polypropylene (PP)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                        High-grade recycled PP granules derived from post-consumer waste.
+                        It offers an exceptional balance of properties including high stiffness, good impact strength,
+                        and excellent chemical resistance.
+                    </p>
 
                     <h4 style="color: var(--color-primary);">Applications</h4>
-                    <p>Automotive parts, packaging crates, household goods, flower pots, and furniture.</p>
+                    <p>Ideal for injection molding and extrusion processes. Common uses include automotive parts,
+                        packaging crates, household goods, flower pots, and furniture components.</p>
 
-                    <br>
-                    <a href="contact.html" class="btn btn-primary">Request Datasheet</a>
+                    <button class="btn btn-primary know-more-btn" onclick="toggleImage('pp-img')">Know More</button>
+
+                    <div id="pp-img" class="product-image-container">
+                        <img src="assets/rPP.jpg" alt="Recycled PP Granules"
+                            style="border-radius: 8px; box-shadow: var(--shadow-lg); width: 100%;">
+                    </div>
                 </div>
             </div>
 
-            <!-- Product 2: PE -->
-            <div class="reveal"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg); align-items: center;">
-                <div style="order: 2;"> <!-- Image on right for desktop -->
-                    <img src="assets/pe-granules.png" alt="PCR Polyethylene Granules"
-                        style="border-radius: 8px; box-shadow: var(--shadow-lg);">
-                </div>
-                <div style="order: 1;">
-                    <span class="badge" style="background: var(--color-secondary); color: white; border: none;">PCR-HDPE
-                        / LDPE</span>
-                    <h2 style="font-size: 2.2rem; margin-top: 10px;">Recycled Polyethylene (PE)</h2>
-                    <p style="margin-bottom: 20px;">Versatile PE solutions including HDPE and LDPE grades. offering
-                        excellent chemical resistance and durability.</p>
+            <!-- PE Tab Content -->
+            <div id="pe-tab" class="tab-content reveal">
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <span class="badge"
+                        style="background: var(--color-secondary); color: white; border: none; margin-bottom: 10px; display: inline-block;">PCR-PE</span>
+                    <h2 style="font-size: 2.2rem;">Recycled Polyethylene (PE)</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                        Versatile PE solutions including HDPE and LDPE grades, offering excellent chemical resistance,
+                        durability, and flexibility for various industrial needs.
+                    </p>
 
-                    <h4 style="color: var(--color-primary);">Technical Specifications</h4>
-                    <ul style="margin-bottom: 20px; list-style-type: none;">
-                        <li>• <strong>Melt Flow Index (MFI):</strong> 0.3 - 2.0 g/10min</li>
-                        <li>• <strong>Density:</strong> 0.93 - 0.96 g/cm³</li>
-                        <li>• <strong>Color:</strong> Natural, Milky, Mixed Color</li>
-                        <li>• <strong>Source:</strong> Post-consumer bottles & films</li>
-                    </ul>
+                    <!-- LDPE Sub-section -->
+                    <div class="sub-section">
+                        <h3>Low Density Polyethylene (LDPE)</h3>
+                        <p style="margin-bottom: 15px;">
+                            <strong>LDPE</strong> is characterized by its superior flexibility and high resilience. It
+                            is a tough, durable, and weather-resistant material.
+                            Our recycled LDPE is widely used in applications where flexibility and transparency are key.
+                        </p>
+                        <button class="btn btn-secondary know-more-btn" onclick="toggleImage('ldpe-img')">Know
+                            More</button>
+                        <div id="ldpe-img" class="product-image-container">
+                            <img src="assets/rLDPE.jpg" alt="Recycled LDPE Granules"
+                                style="border-radius: 8px; width: 100%;">
+                        </div>
+                    </div>
 
-                    <h4 style="color: var(--color-primary);">Applications</h4>
-                    <p>Pipes, blow molding bottles, film extrusion, and logistics packaging.</p>
-
-                    <br>
-                    <a href="contact.html" class="btn btn-primary">Request Datasheet</a>
+                    <!-- HDPE Sub-section -->
+                    <div class="sub-section">
+                        <h3>High Density Polyethylene (HDPE)</h3>
+                        <p style="margin-bottom: 15px;">
+                            <strong>HDPE</strong> is known for its high strength-to-density ratio. It provides excellent
+                            rigidity and impact resistance.
+                            Suitable for products requiring structural integrity and durability against environmental
+                            stress.
+                        </p>
+                        <button class="btn btn-secondary know-more-btn" onclick="toggleImage('hdpe-img')">Know
+                            More</button>
+                        <div id="hdpe-img" class="product-image-container">
+                            <img src="assets/rHDPE.jpg" alt="Recycled HDPE Granules"
+                                style="border-radius: 8px; width: 100%;">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,4 +157,3 @@
 
 
 </html>
-
